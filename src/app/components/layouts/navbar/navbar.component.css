@@ -1,0 +1,44 @@
+.navbar-custom {
+    background-color: #1D2539;
+    z-index: 1;
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
+    /* overflow: hidden; */
+    
+    /* margin-left: 200px;
+    margin-right: 200px */
+}
+
+
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgb(255, 115, 0);
+    font-family: "Century Gothic" !important;
+    font-weight: bold;
+    position: relative;
+
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(235, 235, 235);
+    font-family: "Century Gothic" !important;
+
+}
+/* change the color of active or hovered links*/
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: rgb(255, 115, 0);
+    font-weight: bold;
+    font-family: "Century Gothic" !important;
+
+}
+
+/* this is a black icon with 50% opacity */
+span.navbar-toggler-icon {
+   background-image: url('/../../assets/img/coll1.svg');
+   z-index: 1;
+
+}

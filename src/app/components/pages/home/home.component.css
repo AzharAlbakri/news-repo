@@ -1,0 +1,51 @@
+
+.carousel-inner {
+  position: relative;
+  text-align: center;
+  }
+.carousel-caption{
+  color: #ffffff;
+  font-family: "Georgia";
+  font-weight: bold;
+ 
+}
+.img_txt{
+  /* padding: -200; */
+  float: left;
+  margin-bottom: 400px;
+  text-align: left;
+  font-size: 45pt !important
+}
+
+/* Slides idicator sha7tat */
+.carousel-indicators li{
+  background-color: rgb(143, 143, 143) !important;
+}
+
+
+.carousel-indicators .active{
+  background-color: rgb#00BDFF;
+}
+
+h5  {
+  text-align: center;
+  font-size: 13pt !important;
+  color: #00BDFF;
+  font-family: "Georgia";
+  font-weight: bold;
+
+}
+p {
+  text-align: center;
+  font-size: 10pt !important;
+  font-family: "Century Gothic";
+
+}
+
+a {
+  float: left;
+  margin-bottom: 300px;
+  font-family: "Century Gothic";
+
+}
+

@@ -1,0 +1,30 @@
+<body>
+    <form class="form-signin" (ngSubmit)="onFormSubmit(registration)" #signupForm = "ngForm">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">SIGN UP</h1>
+    <p>Once you loggedin you will be able to like, share, comment on any news</p>
+  </div>
+  <div class="form-label-group">
+    <input type="email" class="form-control" placeholder="Your Name" [(ngModel)]="registration.name" name="name" required autofocus>
+    <label for="inputEmail">Your Name</label>
+  </div>
+  <div class="form-label-group">
+    <input type="email" id="email" class="form-control" placeholder="Email address" [(ngModel)]="registration.email" name="email" required autofocus>
+    <label for="inputEmail">Email address</label>
+  </div>
+  
+  <div class="form-label-group">
+    <input type="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="registration.password" name="password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+  
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+  </form>
+  </body>

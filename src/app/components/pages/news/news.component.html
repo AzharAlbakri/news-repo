@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="sidenav.open ()" ><mat-icon>menu</mat-icon></button>
+  <span>News Headlines</span>  
+  <span class="example-spacer"></span>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  
+  <mat-sidenav #sidenav class="example-sidenav">
+    <mat-list class="list-nav">
+        <mat-list-item class="list-item" *ngFor="let source of mSources" (click)="searchArticles(source.id);sidenav.close();">
+          
+          <div mat-card-avatar [ngStyle]="{'background-image': 'url(../assets/images/'+ source.id +'.png)'}" class="example-header-image"></div>
+          
+          <span class="source-name"> {{source.name}}</span>
+        
+        </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+
+
+ <div class="container marketing">
+
+  <div class="card mb-3" *ngFor="let article of mArticles">
+      <img class="card-img-top" src="{{article.urlToImage}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{article.title}}</h5>
+        <p class="card-text">{{article.description}}</p>
+        <p class="card-text"><small class="text-muted">{{article.source.name}}</small></p>
+      </div>
+      <div>
+        <hr>
+        <mat-card-actions class="action-buttons">
+            <button mat-button color="primary"><mat-icon>thumb_up_alt</mat-icon> 12 Likes</button>
+            <button mat-button color="primary"><mat-icon>comment</mat-icon> Comments</button>
+            <button mat-button color="primary"><mat-icon>share</mat-icon> Share</button>
+            <a mat-button color="primary" href={{article.url}} target="_blank" ><mat-icon>visibility</mat-icon> More</a>
+          </mat-card-actions>
+      </div>
+      <br>
+    </div>
+</div>
+

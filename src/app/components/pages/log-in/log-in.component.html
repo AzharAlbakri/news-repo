@@ -1,0 +1,60 @@
+<body>
+  <form class="form-signin" (ngSubmit)="onlogInSubmit(logIn)" #loginForm = "ngForm">
+<div class="text-center mb-4">
+  <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">LOG IN</h1>
+  <p>Once you loggedin you will be able to like, share, comment on any news</p>
+</div>
+
+<div class="form-label-group">
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email"  [(ngModel)]="logIn.email"  autofocus>
+  <label for="inputEmail">Email address</label>
+</div>
+
+<div class="form-label-group">
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"  [(ngModel)]="logIn.password" required>
+  <label for="inputPassword">Password</label>
+</div>
+
+<div class="checkbox mb-3">
+  <label>
+    <input type="checkbox" value="remember-me"> Remember me
+  </label>
+</div>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+<p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+</form>
+</body>
+
+
+<!-- <div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm jumbotron center-align">
+        <h3>User Log In</h3>
+      </div>
+      
+      <div class="row">
+        <form class="col s12" novalidate  (ngSubmit)="onlogInSubmit(logIn)" #loginForm = "ngForm">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" class="validate" type="text" #Email="ngModel" name="Email"  [(ngModel)]="logIn.Email"  class="validate"  required>
+              <label for="icon_prefix">Email</label>
+              <span *ngIf="!Email.valid  && (Email.dirty || Email.touched)"></span>            
+            </div>
+            <div class="input-field col s6" >
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_Password" class="validate" type="password" #Password="ngModel" name="Password"  [(ngModel)]="logIn.Password"  [pattern]="pwdPattern" required>
+              <label for="icon_Password">password//</label>
+              <span *ngIf="!Password.valid && (Password.dirty || Password.touched)">password uncorect</span>            
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="!loginForm.form.valid">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+        </form>
+     </div>
+     </div>
+  </div>
+  </div> -->
